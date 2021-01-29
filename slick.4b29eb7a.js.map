@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/slick.js"],"names":["$","slick"],"mappings":";AAAAA,EAAE,kBAAkBC","file":"slick.4b29eb7a.js","sourceRoot":"..\\src","sourcesContent":["$('.slick-reviews').slick();\r\n"]}
