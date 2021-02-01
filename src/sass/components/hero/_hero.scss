@@ -198,11 +198,11 @@ $time-delay: 0s, 100ms, 200ms, 300ms, 400ms, 500ms, 600ms, 700ms;
 @keyframes ice-cream {
   0% {
     scale: (0);
-    rotate: (30deg);
+    rotate: (0deg);
   }
   100% {
     scale: (1);
-    rotate: (360deg);
+    rotate: (720deg);
   }
 }
 .hero-product {

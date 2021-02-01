@@ -1225,11 +1225,11 @@ html {
 @keyframes ice-cream {
   0% {
     scale: 0;
-    rotate: 30deg;
+    rotate: 0deg;
   }
   100% {
     scale: 1;
-    rotate: 360deg;
+    rotate: 720deg;
   }
 }
 
