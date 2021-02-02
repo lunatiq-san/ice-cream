@@ -1,12 +1,18 @@
-.container-products {
-  padding: 100px 20px;
+.products {
   background-color: #fff;
+}
+.products {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
   @extend %list;
   @media screen and (min-width: $tablet) {
-    padding: 110px 35px;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
   @media screen and (min-width: $desktop) {
-    padding: 120px 110px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 .second-name {
@@ -51,9 +57,10 @@
 .products-list {
   display: block;
   width: 100%;
+  position: relative;
   @media screen and (min-width: $tablet) {
     display: flex;
-    position: relative;
+
     &:not(:last-child) {
       margin-right: 20px;
     }
@@ -69,6 +76,7 @@
   transform: translateY(-45%);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -60px;
   width: 250px;
   @media screen and (min-width: $tablet) {
     width: 220px;
@@ -80,12 +88,13 @@
 .products-item {
   display: block;
   width: 280px;
-
   border-radius: 24px;
   align-items: center;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 130px;
@@ -105,12 +114,24 @@
   }
   &:nth-child(1) {
     background: #ffb8ca;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 50px rgba(210, 20, 67, 0.6);
+    }
   }
   &:nth-child(2) {
     background: #f0d1a5;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 50px rgba(210, 20, 67, 0.6);
+    }
   }
   &:nth-child(3) {
     background: #c2e297;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 50px rgba(210, 20, 67, 0.6);
+    }
   }
 }
 .products-content {
@@ -129,7 +150,6 @@
 }
 .products-name {
   font-family: Titan One;
-  font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   @media screen and (min-width: $desktop) {
@@ -146,7 +166,7 @@
   margin-bottom: 30px;
 }
 .doted-svg {
-  fill: $main-white-color;
+  --color2: #fff;
 }
 .about-ice-creame {
   font-weight: bold;
@@ -175,9 +195,11 @@
   border-radius: 50%;
   align-items: center;
   text-align: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
-    background: #ecebeb;
+    box-shadow: 0px 8px 50px rgba(210, 20, 67, 0.6);
   }
 }
 .arrow-svg {

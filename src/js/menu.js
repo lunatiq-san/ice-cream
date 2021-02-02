@@ -1,45 +1,31 @@
-(() => {
-    const menuBtnRef = document.querySelector("[data-menu-button]");
-    const mobileMenuRef = document.querySelector("[data-menu]");
-  
-    menuBtnRef.addEventListener("click", () => {
-      const expanded =
-        menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-  
-      menuBtnRef.classList.toggle("is-open");
-      menuBtnRef.setAttribute("aria-expanded", !expanded);
-  
-      mobileMenuRef.classList.toggle("is-open");
-    });
-  })();
-
 // Бургер меню
 
-//   function menuСontainer(selector) {
-//     let menu = $(selector);
-//     let button = menu.find('.menu-button');
-//     let links = menu.find('.menu-item-link');
-//     let overlay = menu.find('.menu-container-overlay');
+function burgerMenu(selector) {
+    let menu = $(selector);
+    let button = menu.find('.menu__button,.buy-now');
+    let links = menu.find('.menu__link');
+    let overlay = menu.find('.menu__overlay');
     
-//     button.on('click', (e) => {
-//         e.preventDefault();
-//         toggleMenu();
-//     });
+    button.on('click', (e) => {
+        e.preventDefault();
+        toggleMenu();
+    });
     
-//     links.on('click', () => toggleMenu());
-//     overlay.on('click', () => toggleMenu());
+    links.on('click', () => toggleMenu());
+    overlay.on('click', () => toggleMenu());
     
-//     function toggleMenu() {
-//         menu.toggleClass('is-open');
-//         if (menu.hasClass('is-open')) {
-//             $('body').css('overflow', 'hidden');
-//         } else {
-//             $('body').css('overflow', 'visible');
-//         }
-//     }
-// }
+    function toggleMenu() {
+        menu.toggleClass('menu_active');
+        if (menu.hasClass('menu_active')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }
+    }
+}
 
-// menuСontainer ('.menu-container');
+burgerMenu ('.menu');
+
 
   // Скрипт кнопки Вверх
 
